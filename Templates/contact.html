@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class='container-fluid mb-4 px-0'>
+    <img src="/static/img/static5.jpg" class="d-block w-100" alt="...">
+</div>
+<h3 class="text-center fst-italic">Contact Us</h3>
+<div class="container mb-4 py-3">
+    <form method="post" action="/contact">
+        {% csrf_token %}
+        <div class="from-group py-2">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+        </div>
+
+        <div class="from-group py-2">
+            <label for="phone" class="form-label">Your Phone Number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+        </div>
+
+        <div class="from-group py-2">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+            <div id="email" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="form-group py-2">
+            <div class="help-block with-errors"><ul class="list-unstyled"><li>Please enter your comments</li></ul></div>
+            <textarea placeholder="Your Comments" id="comment" name="comment" cols="20" rows="6" class="form-control" required="" data-error="Please enter your comments" style="height: 47px; width: 1115px;"></textarea>
+            </div>
+
+        <div class="d-grid gap-0 col-1 mx-auto py-5">
+            <button type="submit" class="btn btn-primary ">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class='p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end'>
+  <body style="background-color:powderblue; ">
+    <footer id="footer">
+        <div class="footer-top">
+        <div class="container">
+        <div class="row">
+        <div class="col-xs-12 col-sm-3">
+        <div class="footer-widget">
+        <h2>About Us</h2>
+        <p align="justify">Beauty Parlor. Salon is a renowned salon chain, with branches across Lahore. The Beauty Salon has successfully been providing top quality professional treatments since 2002 and boasts state-of-the-art infrastructure and certified services. </p>
+        </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+        <div class="footer-widget">
+        <h2>Quick Links</h2>
+        <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        
+        
+        <li><a href="/contact">Contact Us</a></li>
+        </ul>
+        </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+        <div class="footer-widget">
+        <h2>Contact Info</h2>
+        <ul>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> +92 999999999</li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> +92 999999999</li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> +92 999999999</li>
+        <li><i class="fa fa-envelope-o" aria-hidden="true"></i> info@beauty_parlor.com</li>
+        </ul>
+        </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+        <div class="footer-widget">
+        <h2>Business hour</h2>
+        <ul class="bussiness-hour">
+        <li>Start Time: <span class="pull-right">11am </span></li>
+        <li>End Time: <span class="pull-right">8pm </span></li>
+        
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+        <div class="container">
+        <div class="row">
+        <div class="col-xs-12">
+        <div class="copyright text-center">
+        {% comment %} <p>©copyright 2016 Amina.Z| All right reserved.</p> {% endcomment %}
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </footer>
+
+    </body>
+</div>
+ </body>
+</html>
+
+
+
+{% endblock body %}
