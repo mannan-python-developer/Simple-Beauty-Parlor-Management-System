@@ -27,7 +27,7 @@ Follow these steps to run the Beauty Parlor Management System on your local mach
 1. **Clone the Repository:**
    Clone this repository to your local machine using the following command:
    ```bash
-   git clone https://github.com/mannan258/Simple-Beauty-Parlor-Management-System.git
+   git clone https://github.com/mannan-python-developer/Simple-Beauty-Parlor-Management-System.git
 
 2. **Run Migrate and Migrations:**
   Apply database migrations to set up the database.
